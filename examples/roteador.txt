@@ -1,0 +1,29 @@
+-- Caso mínimo de um roteador.
+-- definições de taxas e probabilidades:
+D lambda 10
+D muF 15
+D muR 20
+D muT 25
+D alpha 0.1
+D notAlpha 0.9
+D beta 0.8
+D notBeta 0.2
+-- definições de lugares
+-- (com suas marcações iniciais e transições):
+L P1 T2
+L P2 T3 T4
+L P3 T5
+L P4 T6 T7
+L P5 T8
+L P6 T9
+-- definições de transições (com suas
+-- distribuições/probabilidades e pesos):
+T T1 M lambda P1
+T T2 M muF P2
+T T3 P alpha
+T T4 P notAlpha P3
+T T5 M muR P4
+T T6 P beta P5
+T T7 P notBeta P6
+T T8 M muT
+T T9 M muT
